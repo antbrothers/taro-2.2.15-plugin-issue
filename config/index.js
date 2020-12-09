@@ -37,24 +37,9 @@ const config = {
   defineConstants: {
   },
   mini: {
-    // webpackChain (chain) {
-    //   chain.optimization.sideEffects(false)
-    // },
-    webpackChain(chain) {     
-      chain.merge({
-        optimization: {
-          usedExports: true,
-        },
-        module: {
-          rules: [
-            {
-              include: path.resolve('node_modules', 'taro-ui'),
-              sideEffects: false
-            }
-          ]
-        }
-      })
-    },
+    webpackChain (chain) {
+      chain.optimization.sideEffects(false)
+    },   
     postcss: {
       autoprefixer: {
         enable: true,
