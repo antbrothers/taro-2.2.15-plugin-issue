@@ -13,9 +13,7 @@ const config = {
   babel: {
     sourceMap: true,
     presets: [
-      ['env', {
-        modules: false
-      }]
+      ['env']
     ],
     plugins: [
       'transform-decorators-legacy',
